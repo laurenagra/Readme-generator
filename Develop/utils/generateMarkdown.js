@@ -15,39 +15,43 @@ function generateMarkdown(data) {
   //licensing info missing 
   return `# ${data.title}
 
+  ![Github license](http://img.shields.io/badge/license-${data.license}-blue.svg)
+
+  ### Description
+  ${data.description}
+
   ## Table of Contents
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [License](#license)
   - [Contribution](#contribution)
   - [Test Instructions](#test-instructions)
   - [Contact Information](#contact-information)
 
 
-  ### Description
-  ${data.description}
-
-
   ### Installation
-  ${data.installation}
+  ${data.install}
 
 
   ### Usage
   ${data.usage}
 
 
+  ### License
+  This project is licensed under ${data.license}
+
+
   ### Contribution
-  ${data.contribution}
+  ${data.contributers}
 
 
   ### Test-Instructions
-  ${data.tests}
+  ${data.test}
 
   ### Contact-Information
-[Github Profile](https://github.com/${data.username})
-${data.email}
-  
-`;
+  If you have any questions about this projects, please contact me directly at ${data.email}. You can view more of my projects at https://github.com/${data.github}.
+  `;
 }
 
 module.exports = generateMarkdown;
