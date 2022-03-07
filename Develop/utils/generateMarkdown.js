@@ -15,7 +15,7 @@ function generateMarkdown(data) {
   //licensing info missing 
   return `# ${data.title}
 
-  ![Github license](http://img.shields.io/badge/license-${data.license}-blue.svg)
+  <a href="https://img.shields.io/badge/License-${data.license}-brightgreen"><img src="https://img.shields.io/badge/License-${data.license}-brightgreen"></a>
 
   ### Description
   ${data.description}
@@ -43,7 +43,7 @@ function generateMarkdown(data) {
 
 
   ### Contribution
-  ${data.contributers}
+  ${data.contributors}
 
 
   ### Test-Instructions
